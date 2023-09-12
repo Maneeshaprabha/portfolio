@@ -7,7 +7,7 @@
     --hue-color:242;
 
     /* HSL Color Mode */
-    --skin-color: hsl(342, 92%, 46%);
+    --skin-color: rgb(225, 9, 74);
     /* --skin-color: hsl(0, 0%, 20%); */
 
     --title-color: hsl(var(--hue-color), 8%, 95%);
@@ -17,7 +17,11 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
     --afterBox-color:hsl(var(--hue-color),  0%, 20%);
+    --front-image:url('../img/home-bg.jpg');
+    --second-image:url('../img/about-img.jpg');
+    --title-color2: hsl(var(--hue-color), 8%, 95%);
 
+   
 
     /*===== Font and Typography =====*/
     --body-font: 'Poppins', sans-serif;
@@ -62,6 +66,8 @@
         --normal-font-size: .938rem;
         --small-font-size: .813rem;
         --smaller-font-size: .75rem;
+      
+        
     }
 }
 
@@ -73,8 +79,21 @@
     box-sizing: border-box;
 }
 
+
+
 html{
     scroll-behavior: smooth;
+}
+
+.ligth-theme{
+    --title-color:hsl(var(--hue-color), 19%, 5%);
+    --body-color: hsl(var(--hue-color), 8%, 95%);
+    --box-color:hsl(var(--hue-color), 8%, 85%);
+    --text-color: hsl(var(--hue-color), 20%, 5%);
+    --front-image:url('../img/home-bgwhite.jpg');
+    --title-color2: hsl(var(--hue-color), 8%, 95%);
+    --second-image:url('../img/about-imgwhite.jpg');
+   
 }
 
 body,button, input{
@@ -172,7 +191,7 @@ button input{
 
 .nav__logo-text{
     font-size: 1.125rem;
-    color: var(--title-color);
+    color: var(--title-color2);
     font-weight: var(--font-bold);
     line-height: 40px;
 }
@@ -213,7 +232,22 @@ button input{
     left: 0;
     right: 0;
     text-align: center;
+    width: 30px;
+    cursor: pointer;
+    margin: 25px;
 }
+
+#icon{
+    position: absolute;
+  
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+     margin: auto;
+}
+
 
 .social__share{
     font-size: 1.5rem;
@@ -229,7 +263,7 @@ button input{
     font-size: 1.2rem;
     border-radius: .25rem;
     background-color: var(--skin-color);
-    color: var(--title-color);
+    color: var(--title-color2);
     display: none;
     justify-content: center;
     align-items: center;
@@ -271,7 +305,7 @@ button input{
 
 /*===== Home Section =====*/
 .home{
-    background: url('../img/home-bg.jpg');
+    background: var(  --front-image);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -391,7 +425,7 @@ button input{
     align-items: center;
     columns: .5rem;
     background-color:var(--skin-color);
-    color: var(--title-color);
+    color: var(--title-color2);
     padding: .7rem 1.4rem;
     border-radius: .25rem;
     font-weight: var(--font-medium);
@@ -433,8 +467,8 @@ button input{
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    color: var(--title-color);
-    opacity: 0;
+    color: var(--title-color2);
+   opacity: 0;
     pointer-events: none;
     transition: all .4s;
 
@@ -445,7 +479,6 @@ button input{
     pointer-events: auto;
     opacity: 1;
 }
-
 
 
 /*===== About Section =====*/
@@ -460,6 +493,8 @@ button input{
     width: 580px;
     border-radius: 0.75rem;
     justify-self: center;
+    background: var(  --second-image);
+
 }
 
 .about__heading{
@@ -475,7 +510,7 @@ button input{
 
 .about__info{
     
-    grid-template-columns: repeat(3,140px);
+    grid-template-columns: repeat(2,140px);
     columns: .5rem;
     margin-bottom: var(--mb-3);
 }
@@ -1116,6 +1151,7 @@ button input{
 .contact__button-icon{
     font-size: 1rem;
     transition: .3s;
+
 }
 
 .contact__button:hover .contact__button-icon{
@@ -1312,6 +1348,10 @@ textarea.input{
 }
 
 @media screen and (max-width: 1216px) {
+   
+     
+
+
     .about__container{
         column-gap: 2.5rem;
     }
@@ -1343,11 +1383,27 @@ textarea.input{
         transform: translateX(0);
     }
 
-    .nav__logo,
-    .btn__share{
+    /* .nav__logo
+    {
         display: none;
 
-    }
+    } */
+    /* #icon {
+        display: flex;
+        position: absolute;
+        bottom: 38.8rem;
+        left: 460px;
+        right: 18px;
+        text-align: center;
+        font-size: 1.5rem;
+        background: var(--skin-color);
+        border-radius: 50%;
+        border: 4px solid var(--skin-color);
+        
+
+
+} */
+    
 
     .nav__menu{
         height: 100%;
@@ -1462,13 +1518,36 @@ textarea.input{
 
 /* For Medium Devices */
 @media screen and (max-width: 768px) {
+  
 
+    /* #icon {
+        display: flex;
+        position: absolute;
+        bottom: 38.8rem;
+        left: 338px;
+        right: 18px;
+        text-align: center;
+        font-size: 1.5rem;
+        background: var(--skin-color);
+        border-radius: 50%;
+        border: 4px solid var(--skin-color);
+        right: initial;
 
+}
+     */
+  
     .to__top {
-        width: 40px; /* Set a smaller width for smaller screens */
-        height: 40px; /* Set a smaller height for smaller screens */
-        font-size: 28px; /* Adjust the font size accordingly */
+        width: 40px; 
+        height: 40px; 
+        font-size: 28px; 
     }
+    .about__info {
+        
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
 
     .about__img{
         width: 250px;
@@ -1556,7 +1635,23 @@ textarea.input{
         left: 1.5rem;
 
     }
+/* 
+    #icon {
+        display: flex;
+        position: absolute;
+        bottom: 38.8rem;
+        left: 247px;
+        right: 18px;
+        text-align: center;
+        font-size: 1.5rem;
+        background: var(--skin-color);
+        border-radius: 50%;
+        border: 4px solid var(--skin-color);
+        right: initial;
 
+
+} */
+    
     .home{
         background-image: none;
         height: initial;
@@ -1640,6 +1735,22 @@ textarea.input{
 
 /* For Small Devices */
 @media screen and (max-width: 350px) {
+
+    /* #icon {
+        display: flex;
+        position: absolute;
+        bottom: 38.8rem;
+        left: 138px;
+        right: 18px;
+        text-align: center;
+        font-size: 1.5rem;
+        background: var(--skin-color);
+        border-radius: 50%;
+        border: 4px solid var(--skin-color);
+        
+
+
+} */
 
     .to__top {
         width: 30px; /* Set a smaller width for smaller screens */

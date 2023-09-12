@@ -29,6 +29,24 @@ if (navClose) {
     });
 }
 
+
+
+
+
+// ............darktheme..................
+var icon = document.getElementById("icon");
+
+icon.onclick=function(){
+    document.body.classList.toggle("ligth-theme");
+    if(document.body.classList.contains("ligth-theme")){
+        icon.src= "assets/img/moon.png";
+
+    }else{
+        icon.src="assets/img/sun.png";
+    }
+}
+
+
 // ..........................scroll buton ............................
 
 const toTop = document.querySelector(".to__top");
@@ -43,6 +61,9 @@ window.addEventListener("scroll", ()=>{
 })
 
 // ..........................scroll buton ............................
+
+
+
 
 
 /*=============== SKILLS TABS ===============*/
