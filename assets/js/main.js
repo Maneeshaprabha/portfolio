@@ -35,14 +35,17 @@ if (navClose) {
 
 // ............darktheme..................
 var icon = document.getElementById("icon");
+var aboutImg = document.querySelector(".about__img");
 
 icon.onclick=function(){
     document.body.classList.toggle("ligth-theme");
     if(document.body.classList.contains("ligth-theme")){
         icon.src= "assets/img/moon.png";
+        aboutImg.src = "assets/img/about-imgwhite.jpg";
 
     }else{
         icon.src="assets/img/sun.png";
+        aboutImg.src = "assets/img/about-img.jpg";
     }
 }
 
