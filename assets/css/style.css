@@ -34,6 +34,7 @@
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
+        --smallers-font-size: .700rem;
 
     /*===== Font Weight =====*/
     --font-medium: 500;
@@ -601,6 +602,10 @@ button input{
     margin-bottom: var(--mb-1);
 }
 
+.timeline__subtitle{
+    font-size: var(--smallers-font-size);
+    margin-bottom: var( --mb-0-75);
+}
 .timeline__date{
     display: flex;
     align-items: center;
@@ -1102,11 +1107,16 @@ button input{
 }
 
 /*===== Contact Section =====*/
-.contact__container{
+.contact__container {
+    display: grid;
     grid-template-columns: 300px 340px;
     column-gap: 3rem;
     justify-content: center;
     align-items: center;
+}
+
+.contact {
+    min-height: 100vh;
 }
 
 .contact__info{
